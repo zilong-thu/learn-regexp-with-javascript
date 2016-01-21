@@ -25,3 +25,5 @@ console.log(pattern.exec(str));  // ["for", index: 20, input: "some text for tes
 ## 匹配任意字符
 
 `.`可以匹配任意的字符、字母、数字以及`.`本身。
+
+像`.`这样的字符就是元字符，因为它具有自身之外的更多含义。
