@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>JavaScript对正则表达式的支持 | 学习正则表达式-基于JavaScript</title>
+        <title>匹配单个字符 | 学习正则表达式-基于JavaScript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,8 @@
         
     
     
-    <link rel="next" href="../section2/index.html" />
     
-    
-    <link rel="prev" href="../index.html" />
+    <link rel="prev" href="../section1/index.html" />
     
 
         
@@ -49,9 +47,9 @@
         
         
     <div class="book"
-        data-level="1"
-        data-chapter-title="JavaScript对正则表达式的支持"
-        data-filepath="section1/index.md"
+        data-level="2"
+        data-chapter-title="匹配单个字符"
+        data-filepath="section2/index.md"
         data-basepath=".."
         data-revision="Thu Jan 21 2016 15:05:59 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -82,7 +80,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1" data-path="section1/index.html">
+        <li class="chapter " data-level="1" data-path="section1/index.html">
             
                 
                     <a href="../section1/index.html">
@@ -97,7 +95,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2" data-path="section2/index.html">
+        <li class="chapter active" data-level="2" data-path="section2/index.html">
             
                 
                     <a href="../section2/index.html">
@@ -145,62 +143,13 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="javascript&#x5BF9;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x652F;&#x6301;">JavaScript&#x5BF9;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x652F;&#x6301;</h1>
-<p>RegExp &#x5BF9;&#x8C61;&#x7684; <code>exec(), test()</code> &#x65B9;&#x6CD5;</p>
-<table>
-<thead>
-<tr>
-<th>&#x65B9;&#x6CD5;</th>
-<th>&#x8F93;&#x5165;</th>
-<th>&#x8FD4;&#x56DE;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>exec</td>
-<td>String</td>
-<td>Array &#x6216;&#x8005; null</td>
-</tr>
-<tr>
-<td>test</td>
-<td>String</td>
-<td>Boolean</td>
-</tr>
-</tbody>
-</table>
-<p>String &#x5BF9;&#x8C61;&#x7684; <code>match() | replace() | search() | split()</code> &#x65B9;&#x6CD5;</p>
-<table>
-<thead>
-<tr>
-<th>&#x65B9;&#x6CD5;</th>
-<th>&#x8F93;&#x5165;</th>
-<th>&#x8FD4;&#x56DE;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>match</td>
-<td>RegExp</td>
-<td>Boolean</td>
-</tr>
-<tr>
-<td>replace</td>
-<td>RegExp</td>
-<td>String</td>
-</tr>
-<tr>
-<td>search</td>
-<td>RegExp</td>
-<td></td>
-</tr>
-<tr>
-<td>split</td>
-<td>RegExp</td>
-<td>Array</td>
-</tr>
-</tbody>
-</table>
-
+                        <h1 id="&#x5339;&#x914D;&#x5355;&#x4E2A;&#x5B57;&#x7B26;">&#x5339;&#x914D;&#x5355;&#x4E2A;&#x5B57;&#x7B26;</h1>
+<p>&#x53EA;&#x662F;&#x4E3A;&#x4E86;&#x5339;&#x914D;&#x4E00;&#x6BB5;&#x7EAF;&#x6587;&#x672C;&#xFF0C;&#x90A3;&#x4E48;&#x76EE;&#x7684;&#x5F80;&#x5F80;&#x662F;&#x786E;&#x5B9A;&#x5176;&#x662F;&#x5426;&#x5B58;&#x5728;&#x3002;&#x4F3C;&#x4E4E;&#x5E94;&#x8BE5;&#x4F18;&#x5148;&#x4F7F;&#x7528; <code>RegExp.prototype.test()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x6216;&#x8005; <code>String.prototype.search()</code> &#x65B9;&#x6CD5;&#x3002;&#x524D;&#x8005;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x662F;&#x5426;&#x5339;&#x914D;&#x6210;&#x529F;&#x7684;&#x5E03;&#x5C14;&#x503C;&#xFF1B;&#x5BF9;&#x4E8E;&#x540E;&#x8005;&#xFF0C;&#x5982;&#x679C;&#x5339;&#x914D;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x5176;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#x4E0B;&#x6807;&#xFF08;&#x4ECE;0&#x5F00;&#x59CB;&#xFF09;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; -1&#x3002;</p>
+<pre><code>var str = &apos;some text for test, for test.&apos;;
+var pattern = /for/;
+console.log(str.search(pattern));  // 10
+console.log(pattern.test(str));  // true
+</code></pre>
                     
                     </section>
                 
@@ -210,10 +159,8 @@
         </div>
 
         
-        <a href="../index.html" class="navigation navigation-prev " aria-label="Previous page: Introduction"><i class="fa fa-angle-left"></i></a>
+        <a href="../section1/index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: JavaScript对正则表达式的支持"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../section2/index.html" class="navigation navigation-next " aria-label="Next page: 匹配单个字符"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
