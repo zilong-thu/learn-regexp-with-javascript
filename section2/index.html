@@ -51,7 +51,7 @@
         data-chapter-title="匹配单个字符"
         data-filepath="section2/index.md"
         data-basepath=".."
-        data-revision="Thu Jan 21 2016 15:05:59 GMT+0800 (CST)"
+        data-revision="Thu Jan 21 2016 15:25:23 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -144,12 +144,21 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="&#x5339;&#x914D;&#x5355;&#x4E2A;&#x5B57;&#x7B26;">&#x5339;&#x914D;&#x5355;&#x4E2A;&#x5B57;&#x7B26;</h1>
+<h2 id="&#x5339;&#x914D;&#x7EAF;&#x6587;&#x672C;">&#x5339;&#x914D;&#x7EAF;&#x6587;&#x672C;</h2>
 <p>&#x53EA;&#x662F;&#x4E3A;&#x4E86;&#x5339;&#x914D;&#x4E00;&#x6BB5;&#x7EAF;&#x6587;&#x672C;&#xFF0C;&#x90A3;&#x4E48;&#x76EE;&#x7684;&#x5F80;&#x5F80;&#x662F;&#x786E;&#x5B9A;&#x5176;&#x662F;&#x5426;&#x5B58;&#x5728;&#x3002;&#x4F3C;&#x4E4E;&#x5E94;&#x8BE5;&#x4F18;&#x5148;&#x4F7F;&#x7528; <code>RegExp.prototype.test()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x6216;&#x8005; <code>String.prototype.search()</code> &#x65B9;&#x6CD5;&#x3002;&#x524D;&#x8005;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x662F;&#x5426;&#x5339;&#x914D;&#x6210;&#x529F;&#x7684;&#x5E03;&#x5C14;&#x503C;&#xFF1B;&#x5BF9;&#x4E8E;&#x540E;&#x8005;&#xFF0C;&#x5982;&#x679C;&#x5339;&#x914D;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x5176;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#x4E0B;&#x6807;&#xFF08;&#x4ECE;0&#x5F00;&#x59CB;&#xFF09;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; -1&#x3002;</p>
 <pre><code>var str = &apos;some text for test, for test.&apos;;
 var pattern = /for/;
 console.log(str.search(pattern));  // 10
 console.log(pattern.test(str));  // true
-</code></pre>
+</code></pre><p>&#x7EDD;&#x5927;&#x591A;&#x6570;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5F15;&#x64CE;&#x7684;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x662F;&#x53EA;&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x7ED3;&#x679C;&#x3002;&#x5C24;&#x5176;&#x5BF9;&#x4E8E;<strong>&#x641C;&#x7D22;</strong>&#x578B;&#x5339;&#x914D;&#xFF0C;&#x627E;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#xFF0C;&#x5C31;&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#x518D;&#x53BB;&#x627E;&#x4E0B;&#x4E00;&#x4E2A;&#x4E86;&#x3002;&#x5982;&#x679C;&#x662F;&#x8981;&#x8FDB;&#x884C;&#x6587;&#x672C;&#x66FF;&#x6362;&#xFF0C;&#x5C31;&#x4E0D;&#x4E00;&#x6837;&#x4E86;&#x3002;&#x5F97;&#x4F7F;&#x7528;&#x6807;&#x5FD7;&#xFF08;flags&#xFF09;&#x6765;&#x8BF4;&#x660E;&#x5F53;&#x524D;&#x7684;&#x5339;&#x914D;&#x6267;&#x884C;&#x65B9;&#x5F0F;&#xFF08;&#x5168;&#x5C40;&#xFF0C;&#x5FFD;&#x89C6;&#x5927;&#x5C0F;&#x5199;&#x7B49;&#x7B49;&#xFF09;&#x3002;</p>
+<p>&#x6DFB;&#x52A0;<code>g</code>&#xFF08;global&#xFF09;&#x6807;&#x8BC6;&#x7B26;&#x540E;&#xFF0C;&#x8FDE;&#x7EED;&#x4E24;&#x6B21;&#x6267;&#x884C;<code>pattern.exec(str)</code>&#xFF1A;</p>
+<pre><code>var str = &apos;some text for test, for test.&apos;;
+var pattern = /for/g;
+console.log(pattern.exec(str));  // [&quot;for&quot;, index: 10, input: &quot;some text for test, for test.&quot;]
+console.log(pattern.exec(str));  // [&quot;for&quot;, index: 20, input: &quot;some text for test, for test.&quot;]
+</code></pre><h2 id="&#x5339;&#x914D;&#x4EFB;&#x610F;&#x5B57;&#x7B26;">&#x5339;&#x914D;&#x4EFB;&#x610F;&#x5B57;&#x7B26;</h2>
+<p><code>.</code>&#x53EF;&#x4EE5;&#x5339;&#x914D;&#x4EFB;&#x610F;&#x7684;&#x5B57;&#x7B26;&#x3001;&#x5B57;&#x6BCD;&#x3001;&#x6570;&#x5B57;&#x4EE5;&#x53CA;<code>.</code>&#x672C;&#x8EAB;&#x3002;</p>
+
                     
                     </section>
                 
