@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>JavaScript对正则表达式的支持 | 学习正则表达式-基于JavaScript</title>
+        <title>匹配一组字符 | 学习正则表达式-基于JavaScript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,8 @@
         
     
     
-    <link rel="next" href="../section2/index.html" />
     
-    
-    <link rel="prev" href="../index.html" />
+    <link rel="prev" href="../section2/index.html" />
     
 
         
@@ -49,9 +47,9 @@
         
         
     <div class="book"
-        data-level="1"
-        data-chapter-title="JavaScript对正则表达式的支持"
-        data-filepath="section1/index.md"
+        data-level="3"
+        data-chapter-title="匹配一组字符"
+        data-filepath="section_03/index.md"
         data-basepath=".."
         data-revision="Wed Jan 27 2016 20:46:27 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -82,7 +80,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1" data-path="section1/index.html">
+        <li class="chapter " data-level="1" data-path="section1/index.html">
             
                 
                     <a href="../section1/index.html">
@@ -112,7 +110,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3" data-path="section_03/index.html">
+        <li class="chapter active" data-level="3" data-path="section_03/index.html">
             
                 
                     <a href="../section_03/index.html">
@@ -167,61 +165,40 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="javascript&#x5BF9;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x652F;&#x6301;">JavaScript&#x5BF9;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x652F;&#x6301;</h1>
-<p>RegExp &#x5BF9;&#x8C61;&#x7684; <code>exec(), test()</code> &#x65B9;&#x6CD5;</p>
-<table>
-<thead>
-<tr>
-<th>&#x65B9;&#x6CD5;</th>
-<th>&#x8F93;&#x5165;</th>
-<th>&#x8FD4;&#x56DE;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>exec</td>
-<td>String</td>
-<td>Array &#x6216;&#x8005; null</td>
-</tr>
-<tr>
-<td>test</td>
-<td>String</td>
-<td>Boolean</td>
-</tr>
-</tbody>
-</table>
-<p>String &#x5BF9;&#x8C61;&#x7684; <code>match() | replace() | search() | split()</code> &#x65B9;&#x6CD5;</p>
-<table>
-<thead>
-<tr>
-<th>&#x65B9;&#x6CD5;</th>
-<th>&#x8F93;&#x5165;</th>
-<th>&#x8FD4;&#x56DE;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>match</td>
-<td>RegExp</td>
-<td>Boolean</td>
-</tr>
-<tr>
-<td>replace</td>
-<td>RegExp</td>
-<td>String</td>
-</tr>
-<tr>
-<td>search</td>
-<td>RegExp</td>
-<td></td>
-</tr>
-<tr>
-<td>split</td>
-<td>RegExp</td>
-<td>Array</td>
-</tr>
-</tbody>
-</table>
+                        <h1 id="&#x5339;&#x914D;&#x4E00;&#x7EC4;&#x5B57;&#x7B26;">&#x5339;&#x914D;&#x4E00;&#x7EC4;&#x5B57;&#x7B26;</h1>
+<h2 id="&#x5B57;&#x7B26;&#x96C6;&#x5408;">&#x5B57;&#x7B26;&#x96C6;&#x5408;</h2>
+<p><code>[</code> &#x548C; <code>]</code> &#x7528;&#x6765;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x96C6;&#x5408;&#xFF0C;&#x53EF;&#x4EE5;&#x5339;&#x914D;&#x542B;&#x6709;&#x8BE5;&#x96C6;&#x5408;&#x4EFB;&#x4E00;&#x5143;&#x7D20;&#x7684;&#x6587;&#x672C;&#x3002;</p>
+<p><strong> &#x793A;&#x4F8B; 1 </strong></p>
+<p>&#x7528; JavaScript &#x5199;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x6708;&#x4EFD;&#x7684;&#x5929;&#x6570;&#x3002;</p>
+<pre><code>function isLeapYear(year){
+  return year%400 === 0 || (year%4 ===0 &amp;&amp; year%100 !== 0);
+}
+
+function getDaysOfMonth(month){
+  var date  = new Date();
+  var month = month || date.getMonth() + 1;
+  var year  = date.getFullYear();
+
+  var totalDays = &apos;31&apos;;
+
+  if( /[469]|(11)/.test(month) ){
+    totalDays = &apos;30&apos;;
+  } else if (month === 2) {
+    totalDays = isLeapYear(year) ? &apos;29&apos; : &apos;28&apos;;
+  }
+
+  return totalDays;
+}
+console.log(getDaysOfMonth(2));  // 2016&#x5E74;&#x7684;&#x8BDD;&#xFF0C;&#x8F93;&#x51FA; 29
+</code></pre><p>&#x4E00;&#x5E74;&#x91CC;&#x6709;7&#x4E2A;&#x6708;&#x4EFD;&#x662F;31&#x5929;&#xFF0C;4&#x4E2A;&#x6708;&#x4EFD;&#x662F;30&#x5929;&#x3002;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;<code>/[469]|(11)/</code>&#x53BB;&#x5339;&#x914D;4&#x6708;&#x3001;6&#x6708;&#x3001;9&#x6708;&#x6216;&#x8005;11&#x6708;&#x3002;<code>|</code>&#x4E3A;&#x6216;&#x8005;&#x7684;&#x610F;&#x601D;&#x3002;<code>()</code>&#x5305;&#x88F9;&#x8D77;&#x6765;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5B50;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x56E0;&#x4E3A;<code>11</code>&#x5FC5;&#x987B;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x6574;&#x4F53;&#x88AB;&#x5339;&#x914D;&#x3002;</p>
+<p><strong> &#x793A;&#x4F8B; 2 </strong></p>
+<p>&#x524D;&#x7AEF;&#x4ECE;&#x540E;&#x7AEF;&#x83B7;&#x53D6;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x542B;&#x6709;&#x5706;&#x62EC;&#x53F7;&#xFF0C;&#x8981;&#x5C06;&#x5176;&#x663E;&#x793A;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x3002;&#x9700;&#x8981;&#x5728;&#x9047;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x5706;&#x62EC;&#x53F7;&#x540E;&#x5C31;&#x8FDB;&#x884C;&#x6362;&#x884C;&#xFF0C;&#x4E0D;&#x7136;&#x5B57;&#x7B26;&#x4E32;&#x53EF;&#x80FD;&#x56E0;&#x4E3A;&#x592A;&#x957F;&#x800C;&#x663E;&#x793A;&#x4E0D;&#x5168;&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;&#x5706;&#x62EC;&#x53F7;&#x53EF;&#x80FD;&#x662F;&#x82F1;&#x6587;&#x534A;&#x89D2;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x4E2D;&#x6587;&#x5168;&#x89D2;&#xFF0C;&#x6240;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528;&#x5B57;&#x7B26;&#x96C6;&#x5408;&#x3002;</p>
+<pre><code>var str = &apos;&#x65B0;&#x534E;&#x4E66;&#x5E97;(&#x4E2D;&#x5173;&#x6751;&#x56FE;&#x4E66;&#x5927;&#x53A6;&#x5E97;)&apos;;
+ var pattern = /([\(\&#xFF08;])/;
+var result = str.replace(pattern, &apos;\n$1&apos;);
+console.log(result);
+</code></pre><p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x4E86;&#x5B57;&#x7B26;&#x96C6;&#x5408;&#x3001;&#x56DE;&#x6EAF;&#x5F15;&#x7528;&#x3002;</p>
+<h2 id="&#x5B57;&#x7B26;&#x96C6;&#x5408;&#x533A;&#x95F4;">&#x5B57;&#x7B26;&#x96C6;&#x5408;&#x533A;&#x95F4;</h2>
 
                     
                     </section>
@@ -232,10 +209,8 @@
         </div>
 
         
-        <a href="../index.html" class="navigation navigation-prev " aria-label="Previous page: Introduction"><i class="fa fa-angle-left"></i></a>
+        <a href="../section2/index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 匹配单个字符"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../section2/index.html" class="navigation navigation-next " aria-label="Next page: 匹配单个字符"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
