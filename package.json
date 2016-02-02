@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "##为何要用正则? 正则表达式是为了专门解决文本的两个问题而产生的：",
   "scripts": {
-    "push-master": "git checkout master && git add --all && git commit -m 'source files update' && git push origin master",
-    "build": "gitbook build && cp package.json _book/",
-    "push-gh-pages": "git checkout gh-pages && cp -r _book/* . && git add --all && git commit -m 'new build' && git push origin gh-pages && git checkout master",
-    "deploy": "npm run push-master && npm run build && npm run push-gh-pages"
+    "git-push-master": "git checkout master && git add --all && git commit -m 'source files update' && git push origin master",
+    "build": "gitbook build && cp package.json ./_book",
+    "git-push-gh-pages": "git checkout gh-pages && cp -r _book/* . && git add --all && git commit -m 'new build' && git push origin gh-pages && git checkout master",
+    "deploy": "npm run git-push-master && npm run build && npm run git-push-gh-pages"
   },
   "repository": {
     "type": "git",
