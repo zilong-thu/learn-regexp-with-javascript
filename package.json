@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "##为何要用正则? 正则表达式是为了专门解决文本的两个问题而产生的：",
   "scripts": {
-    "push-master": "git checkout master && git add --all && git commit -m 'source files update' && git push origin master",
+    "push-master": "git checkout master && gitbook build && git add --all && git commit -m 'source files update' && git push origin master",
     "push-gh-pages": "git checkout gh-pages && cp _book/* . && git add . && git commit -m 'new build' && git push origin gh-pages",
     "deploy": "npm run push-master && npm run push-gh-pages"
   },
