@@ -1,0 +1,40 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/zillong/.nvm/versions/node/v4.2.2/bin/node',
+1 verbose cli   '/Users/zillong/.nvm/versions/node/v4.2.2/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'push-master' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.2
+4 verbose run-script [ 'prepush-master', 'push-master', 'postpush-master' ]
+5 info prepush-master gitbook_regexp_2@1.0.0
+6 info push-master gitbook_regexp_2@1.0.0
+7 verbose unsafe-perm in lifecycle true
+8 info gitbook_regexp_2@1.0.0 Failed to exec push-master script
+9 verbose stack Error: gitbook_regexp_2@1.0.0 push-master: `git checkout master && gitbook build && git add --all && git commit -m 'source files update' && git push origin master`
+9 verbose stack Exit status 1
+9 verbose stack     at EventEmitter.<anonymous> (/Users/zillong/.nvm/versions/node/v4.2.2/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
+9 verbose stack     at emitTwo (events.js:87:13)
+9 verbose stack     at EventEmitter.emit (events.js:172:7)
+9 verbose stack     at ChildProcess.<anonymous> (/Users/zillong/.nvm/versions/node/v4.2.2/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+9 verbose stack     at emitTwo (events.js:87:13)
+9 verbose stack     at ChildProcess.emit (events.js:172:7)
+9 verbose stack     at maybeClose (internal/child_process.js:818:16)
+9 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+10 verbose pkgid gitbook_regexp_2@1.0.0
+11 verbose cwd /Users/zillong/projects/gitbook_regexp_2
+12 error Darwin 14.5.0
+13 error argv "/Users/zillong/.nvm/versions/node/v4.2.2/bin/node" "/Users/zillong/.nvm/versions/node/v4.2.2/bin/npm" "run" "push-master"
+14 error node v4.2.2
+15 error npm  v2.14.7
+16 error code ELIFECYCLE
+17 error gitbook_regexp_2@1.0.0 push-master: `git checkout master && gitbook build && git add --all && git commit -m 'source files update' && git push origin master`
+17 error Exit status 1
+18 error Failed at the gitbook_regexp_2@1.0.0 push-master script 'git checkout master && gitbook build && git add --all && git commit -m 'source files update' && git push origin master'.
+18 error This is most likely a problem with the gitbook_regexp_2 package,
+18 error not with npm itself.
+18 error Tell the author that this fails on your system:
+18 error     git checkout master && gitbook build && git add --all && git commit -m 'source files update' && git push origin master
+18 error You can get their info via:
+18 error     npm owner ls gitbook_regexp_2
+18 error There is likely additional logging output above.
+19 verbose exit [ 1, true ]
