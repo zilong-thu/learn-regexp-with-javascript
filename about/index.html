@@ -51,7 +51,7 @@
         data-chapter-title="关于本书"
         data-filepath="about/index.md"
         data-basepath=".."
-        data-revision="Wed Feb 03 2016 10:54:03 GMT+0800 (CST)"
+        data-revision="Wed Feb 03 2016 10:55:32 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -213,7 +213,7 @@ $ git push origin gh-pages
     &quot;deploy&quot;: &quot;npm run git-push-master &amp;&amp; npm run build &amp;&amp; npm run git-push-gh-pages&quot;
   }
 </code></pre><p>&#x4EE5;&#x540E;&#x6BCF;&#x6B21;&#x5199;&#x5B8C;&#x5185;&#x5BB9;&#x540E;&#xFF0C;&#x53EA;&#x8981;&#x6267;&#x884C; <code>npm run deploy</code> &#x5373;&#x53EF;&#x628A;&#x6E90;&#x7801;&#x53D1;&#x5E03;&#x5230; <code>master</code> &#x5206;&#x652F;&#xFF0C;&#x628A;&#x4E66;&#x7C4D;&#x53D1;&#x5E03;&#x5230; <code>gh-pages</code> &#x5206;&#x652F;&#x3002;&#x6BCF;&#x4E2A;&#x547D;&#x4EE4;&#x90FD;&#x4F1A;&#x7B49;&#x5F85;&#x4E0A;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x6B63;&#x5E38;&#x7ED3;&#x675F;&#x4E4B;&#x540E;&#x624D;&#x4F1A;&#x6267;&#x884C;&#xFF08;&#x5373;&#x540C;&#x6B65;&#x963B;&#x585E;&#x6267;&#x884C;&#xFF09;&#x3002;</p>
-<p>&#x4E0A;&#x9762;&#x7684; <code>scripts</code> &#x5176;&#x5B9E;&#x662F; shell &#x811A;&#x672C;&#x3002;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x5728;&#x9879;&#x76EE;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; <code>deploy.sh</code>&#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;&#xFF1A;</p>
+<p>&#x4E0A;&#x9762;&#x7684; <code>scripts</code> &#x5176;&#x5B9E;&#x662F; shell &#x811A;&#x672C;&#xFF0C;&#x5199;&#x5230;<code>package.json</code>&#x91CC;&#x7684;&#x4E00;&#x4E2A;&#x7F3A;&#x70B9;&#x662F;&#x4E0D;&#x80FD;&#x6362;&#x884C;&#x3002;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x5728;&#x9879;&#x76EE;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; <code>deploy.sh</code>&#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;&#xFF1A;</p>
 <pre><code>#!/bin/bash
 
 git checkout master
