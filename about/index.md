@@ -50,7 +50,7 @@ $ git push origin gh-pages
 
 以后每次写完内容后，只要执行 `npm run deploy` 即可把源码发布到 `master` 分支，把书籍发布到 `gh-pages` 分支。每个命令都会等待上一个命令正常结束之后才会执行（即同步阻塞执行）。
 
-上面的 `scripts` 其实是 shell 脚本。那么可以在项目的根目录下添加一个 `deploy.sh`文件，内容为：
+上面的 `scripts` 其实是 shell 脚本，写到`package.json`里的一个缺点是不能换行。那么可以在项目的根目录下添加一个 `deploy.sh`文件，内容为：
 
 ```
 #!/bin/bash
