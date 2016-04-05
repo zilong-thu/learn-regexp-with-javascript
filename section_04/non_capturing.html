@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>关于本书 | 学习正则表达式-基于JavaScript</title>
+        <title>非捕获 | 学习正则表达式-基于JavaScript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,8 +37,10 @@
         
     
     
+    <link rel="next" href="../section_05/index.html" />
     
-    <link rel="prev" href="../section_05/chapter_01.html" />
+    
+    <link rel="prev" href="../section_04/index.html" />
     
 
         
@@ -47,9 +49,9 @@
         
         
     <div class="book"
-        data-level="6"
-        data-chapter-title="关于本书"
-        data-filepath="about/index.md"
+        data-level="4.1"
+        data-chapter-title="非捕获"
+        data-filepath="section_04/non_capturing.md"
         data-basepath=".."
         data-revision="Wed Apr 06 2016 00:28:07 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -141,7 +143,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="4.1" data-path="section_04/non_capturing.html">
+        <li class="chapter active" data-level="4.1" data-path="section_04/non_capturing.html">
             
                 
                     <a href="../section_04/non_capturing.html">
@@ -197,7 +199,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6" data-path="about/index.html">
+        <li class="chapter " data-level="6" data-path="about/index.html">
             
                 
                     <a href="../about/index.html">
@@ -245,62 +247,28 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="&#x5173;&#x4E8E;&#x672C;&#x4E66;">&#x5173;&#x4E8E;&#x672C;&#x4E66;</h1>
-<h2 id="&#x4F5C;&#x8005;">&#x4F5C;&#x8005;</h2>
-<p><strong><a href="https://github.com/zilong-thu" target="_blank">zilong-thu</a></strong></p>
-<h2 id="&#x5236;&#x4F5C;">&#x5236;&#x4F5C;</h2>
-<p>&#x672C;&#x4E66;&#x4F7F;&#x7528; <a href="https://www.gitbook.com/" target="_blank">GitBook</a> &#x63D0;&#x4F9B;&#x7684; npm &#x5DE5;&#x5177; <a href="https://www.npmjs.com/package/gitbook-cli" target="_blank">gitbook-cli@1.0.1</a> &#x5236;&#x4F5C;&#xFF0C;&#x7136;&#x540E;&#x53D1;&#x5E03;&#x5728; Github Pages &#x670D;&#x52A1;&#x4E0A;&#x3002;</p>
-<pre><code># &#x9996;&#x5148;&#xFF0C;&#x5168;&#x5C40;&#x5B89;&#x88C5; gitbook-cli &#x5DE5;&#x5177;
-npm install -g gitbook-cli
-</code></pre><p>gitbook-cli &#x81EA;&#x5E26;&#x7684;&#x547D;&#x4EE4;&#x6BD4;&#x8F83;&#x5C11;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x4F7F;&#x7528; github &#x63D0;&#x4F9B;&#x7684; githook &#x53D1;&#x5E03;&#x5236;&#x4F5C;&#x5230; GitBook &#x7F51;&#x7AD9;&#x4E0A;&#xFF0C;&#x5012;&#x4E5F;&#x65E0;&#x59A8;&#x3002;&#x4E0D;&#x8FC7;&#x8FD9;&#x91CC;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x81EA;&#x52A8;&#x5316;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;</p>
-<p>&#x5F00;&#x53D1;&#x73AF;&#x5883;&#xFF1A;</p>
-<p>Macbook Pro OXS Yosemite 10.10.5</p>
-<h2 id="&#x53D1;&#x5E03;&#x5230;-github-pages">&#x53D1;&#x5E03;&#x5230; GitHub Pages</h2>
-<p>&#x53C2;&#x8003; <a href="http://www.chengweiyang.cn/gitbook/github-pages/README.html" target="_blank">GitBook &#x7B80;&#x660E;&#x6559;&#x7A0B;: &#x53D1;&#x5E03;&#x5230; GitHub Pages</a>&#xFF1A;</p>
-<p>&#x7B2C;&#x4E00;&#x6B21;&#x6267;&#x884C;&#x4E86; <code>gitbook build</code> &#x4E4B;&#x540E;&#xFF0C;&#x521B;&#x5EFA; <code>gh-pages</code> &#x5206;&#x652F;&#xFF1A;</p>
-<pre><code># &#x521B;&#x5EFA; gh-pages &#x5206;&#x652F;
-$ git checkout --orphan gh-pages
-$ git rm --cached -r .
-$ git clean -df
-$ rm -rf *~
+                        <h1 id="&#x975E;&#x6355;&#x83B7;&#x62EC;&#x53F7;">&#x975E;&#x6355;&#x83B7;&#x62EC;&#x53F7;</h1>
+<blockquote>
+<p>(?:x)
+&#x5339;&#x914D;&apos;x&apos;&#x4F46;&#x662F;&#x4E0D;&#x8BB0;&#x4F4F;&#x5339;&#x914D;&#x9879;&#x3002;&#x8FD9;&#x79CD;&#x88AB;&#x53EB;&#x505A;&#x975E;&#x6355;&#x83B7;&#x62EC;&#x53F7;&#x3002;&#x5339;&#x914D;&#x5230;&#x7684;&#x5B50;&#x5B57;&#x7B26;&#x4E32;&#x4E0D;&#x80FD;&#x901A;&#x8FC7;&#x7ED3;&#x679C;&#x6570;&#x7EC4;&#x7684;[1],...,[n]&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#x3002;</p>
+</blockquote>
+<p>&#x5728; jQuery &#x6E90;&#x7801;&#x4E2D;&#x6709;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x7ECF;&#x5178;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;</p>
+<pre><code>// A simple way to check for HTML strings
+// Prioritize #id over &lt;tag&gt; to avoid XSS via location.hash (#9521)
+// Strict HTML recognition (#11290: must start with &lt;)
+// Shortcut simple #id case for speed
 
-# &#x624B;&#x52A8;&#x6DFB;&#x52A0; .gitignore &#x6587;&#x4EF6;
-$ echo &quot;*~&quot; &gt; .gitignore
-$ echo &quot;_book&quot; &gt;&gt; .gitignore
-$ git add .gitignore
-$ git commit -m &quot;Ignore some files&quot;
-$ git push origin gh-pages
-</code></pre><h2 id="&#x81EA;&#x52A8;&#x5316;&#x53D1;&#x5E03;">&#x81EA;&#x52A8;&#x5316;&#x53D1;&#x5E03;</h2>
-<p>&#x8FD9;&#x662F;&#x6211;&#x6DFB;&#x52A0;&#x7684;&#x81EA;&#x52A8;&#x5316;&#x53D1;&#x5E03;&#x65B9;&#x6CD5;&#x3002;&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;</p>
-<p>&#x5728; master &#x5206;&#x652F;&#x4E0B;&#xFF0C;&#x6DFB;&#x52A0; package.json &#x6587;&#x4EF6;&#x3002;&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x5173;&#x952E;&#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code>&quot;scripts&quot;: {
-    &quot;git-push-master&quot;: &quot;git checkout master &amp;&amp; git add --all &amp;&amp; git commit -m &apos;source files update&apos; &amp;&amp; git push origin master&quot;,
-    &quot;build&quot;: &quot;gitbook build &amp;&amp; cp package.json ./_book&quot;,
-    &quot;git-push-gh-pages&quot;: &quot;git checkout gh-pages &amp;&amp; cp -r _book/* . &amp;&amp; git add --all &amp;&amp; git commit -m &apos;new build&apos; &amp;&amp; git push origin gh-pages &amp;&amp; git checkout master&quot;,
-    &quot;deploy&quot;: &quot;npm run git-push-master &amp;&amp; npm run build &amp;&amp; npm run git-push-gh-pages&quot;
-  }
-</code></pre><p>&#x4EE5;&#x540E;&#x6BCF;&#x6B21;&#x5199;&#x5B8C;&#x5185;&#x5BB9;&#x540E;&#xFF0C;&#x53EA;&#x8981;&#x6267;&#x884C; <code>npm run deploy</code> &#x5373;&#x53EF;&#x628A;&#x6E90;&#x7801;&#x53D1;&#x5E03;&#x5230; <code>master</code> &#x5206;&#x652F;&#xFF0C;&#x628A;&#x4E66;&#x7C4D;&#x53D1;&#x5E03;&#x5230; <code>gh-pages</code> &#x5206;&#x652F;&#x3002;&#x6BCF;&#x4E2A;&#x547D;&#x4EE4;&#x90FD;&#x4F1A;&#x7B49;&#x5F85;&#x4E0A;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x6B63;&#x5E38;&#x7ED3;&#x675F;&#x4E4B;&#x540E;&#x624D;&#x4F1A;&#x6267;&#x884C;&#xFF08;&#x5373;&#x540C;&#x6B65;&#x963B;&#x585E;&#x6267;&#x884C;&#xFF09;&#x3002;</p>
-<p>&#x4E0A;&#x9762;&#x7684; <code>scripts</code> &#x5176;&#x5B9E;&#x662F; shell &#x811A;&#x672C;&#xFF0C;&#x5199;&#x5230;<code>package.json</code>&#x91CC;&#x7684;&#x4E00;&#x4E2A;&#x7F3A;&#x70B9;&#x662F;&#x4E0D;&#x80FD;&#x6362;&#x884C;&#x3002;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x5728;&#x9879;&#x76EE;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; <code>deploy.sh</code>&#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;&#xFF1A;</p>
-<pre><code>#!/bin/bash
+var rquickExpr = /^(?:\s*(&lt;[\w\W]+&gt;)[^&gt;]*|#([\w-]+))$/;
+</code></pre><p>&#x4E0A;&#x9762;&#x7684;&#x6CE8;&#x91CA;&#x91CC;&#xFF0C;&#x5355;&#x8BCD; Prioritize &#x610F;&#x4E3A;&#x201C;&#x4F18;&#x5148;&#x8003;&#x8651;&#x201D;&#x3002;&#x5373;&#xFF0C;&#x4F18;&#x5148;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A; #id&#xFF0C;&#x7136;&#x540E;&#x518D;&#x53BB;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A; HTML &#x6807;&#x7B7E;&#xFF0C;&#x4EE5;&#x907F;&#x514D;&#x57FA;&#x4E8E; location.hash &#x7684; XSS &#x653B;&#x51FB;&#x3002;</p>
+<p>&#x53EA;&#x4F1A;&#x5339;&#x914D;&#x4E24;&#x79CD;&#x683C;&#x5F0F;&#xFF1A;<code>#</code> &#x5F00;&#x5934;&#x7684; ID &#x9009;&#x62E9;&#x5668;&#xFF0C;&#x4EE5;&#x53CA; <code>&lt;</code> &#x5F00;&#x5934;&#x3001;<code>&gt;</code> &#x7ED3;&#x5C3E;&#x7684; HTML &#x6807;&#x7B7E;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x51E0;&#x4E2A;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#xFF1A;</p>
+<pre><code>var str = [&apos;#container&apos;, &apos;div #id&apos;, &apos;&lt;div&gt;haha&lt;/div&gt;&apos;, &apos;aaa&lt;div&gt;aa&lt;/div&gt;&apos;, &apos;&lt;a&gt;&apos;];
 
-git checkout master
-git add --all
-git commit -m &apos;source files update&apos;
-git push origin master
+str.forEach(item =&gt; {
+  console.log(rquickExpr.test(item));
+});
 
-gitbook build
-cp package.json ./_book
-
-git checkout gh-pages
-cp -r _book/* .
-git add --all
-git commit -m &apos;new build&apos;
-git push origin gh-pages
-
-git checkout master
-</code></pre><p>&#x7B2C;&#x4E00;&#x53E5;&#x8BDD; <code>#!/bin/bash</code> &#x6307;&#x5B9A;&#x4E86;&#x8FD9;&#x6BB5;&#x547D;&#x4EE4;&#x7531; bash &#x6765;&#x89E3;&#x91CA;&#x6267;&#x884C;&#x3002;</p>
-<p>&#x6CE8;&#xFF1A;<code>./deploy.sh</code> &#x547D;&#x4EE4;&#x9700;&#x8981;&#x4E00;&#x5B9A;&#x7684;&#x6267;&#x884C;&#x6743;&#x9650;&#x3002;</p>
-<pre><code>chmod 774 deploy.sh
+// true, false, true, false, true
 </code></pre>
                     
                     </section>
@@ -311,8 +279,10 @@ git checkout master
         </div>
 
         
-        <a href="../section_05/chapter_01.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: ^"><i class="fa fa-angle-left"></i></a>
+        <a href="../section_04/index.html" class="navigation navigation-prev " aria-label="Previous page: 捕获"><i class="fa fa-angle-left"></i></a>
         
+        
+        <a href="../section_05/index.html" class="navigation navigation-next " aria-label="Next page: 元字符"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
