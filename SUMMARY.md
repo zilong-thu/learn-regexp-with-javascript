@@ -3,6 +3,7 @@
 * [匹配单个字符](section2/index.md)
 * [匹配一组字符](section_03/index.md)
 * [捕获](section_04/index.md)
+  * [非捕获](section_04/non_capturing.md)
 * [元字符](section_05/index.md)
   * [^](section_05/chapter_01.md)
 * [关于本书](about/index.md)

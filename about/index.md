@@ -6,6 +6,11 @@
 ## 制作
 本书使用 [GitBook](https://www.gitbook.com/) 提供的 npm 工具 [gitbook-cli@1.0.1](https://www.npmjs.com/package/gitbook-cli) 制作，然后发布在 Github Pages 服务上。
 
+```
+# 首先，全局安装 gitbook-cli 工具
+npm install -g gitbook-cli
+```
+
 gitbook-cli 自带的命令比较少，如果是使用 github 提供的 githook 发布制作到 GitBook 网站上，倒也无妨。不过这里提供一个自动化的解决方案。
 
 开发环境：
