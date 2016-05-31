@@ -53,7 +53,7 @@
         data-chapter-title="数量（重复次数）"
         data-filepath="section_05/chapter_02.md"
         data-basepath=".."
-        data-revision="Tue May 31 2016 13:53:10 GMT+0800 (CST)"
+        data-revision="Tue May 31 2016 14:44:13 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -263,9 +263,14 @@
                     <section class="normal" id="section-">
                     
                         <h2 id="&#x91CF;&#x8BCD;">&#x91CF;&#x8BCD;</h2>
-<pre><code>var reg = /\d+\.?\d[1, 2]/g;
-var str = [2, 2., 2.00001, 2.2, 2.22, 2.222, .22];
-str.forEach(item =&gt; { console.log(item, &apos; is:&apos;, reg.test(str)); });
+<p>&#x57FA;&#x672C;&#x7684;&#x91CF;&#x8BCD;&#x8BED;&#x6CD5;&#x662F; <code>{n,m}</code>&#xFF0C;&#x8868;&#x793A;&#x5339;&#x914D;&#x524D;&#x9762;&#x7684;&#x5B57;&#x7B26;&#x81F3;&#x5C11; n &#x6B21;&#xFF0C;&#x6700;&#x591A; m &#x6B21;&#x3002;&#x8BE5;&#x6A21;&#x5F0F;&#x4E2D;&#x4E0D;&#x5141;&#x8BB8;&#x6709;&#x7A7A;&#x683C;&#xFF1B;&#x800C;&#x4E14; n &#x5FC5;&#x987B;&#x5C0F;&#x4E8E;&#x6216;&#x7B49;&#x4E8E; m&#xFF0C;&#x4E8C;&#x8005;&#x5747;&#x4E3A;&#x975E;&#x8D1F;&#x6574;&#x6570;&#x3002;</p>
+<p>&#x5143;&#x5B57;&#x7B26; <code>?</code> &#x8868;&#x793A;&#x5339;&#x914D;&#x524D;&#x9762;&#x7684;&#x5B57;&#x7B26; 0 &#x6B21;&#x6216; 1 &#x6B21;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7ED9;&#x51FA;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#xFF1A;&#x6821;&#x9A8C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x662F;&#x5426;&#x4E3A;&#x6700;&#x591A;&#x7CBE;&#x786E;&#x5230;&#x5C0F;&#x6570;&#x70B9;&#x540E;&#x4E24;&#x4F4D;&#x7684;&#x6570;&#x5B57;&#x3002;&#x3010;&#x5F85;&#x5B8C;&#x6210;&#x3011;</p>
+<pre><code>var reg = /\d+\.?\d{1,2}/g;
+var str = [&apos;2&apos;, &apos;2.&apos;, &apos;2.00.001&apos;, &apos;2.2&apos;, &apos;2.22&apos;, &apos;2.222&apos;, &apos;.22&apos;, &apos;-2.2&apos;, &apos;+2.2&apos;];
+str.forEach(item =&gt; {
+  console.log(item, &apos; is:&apos;, reg.test(str)); 
+});
 </code></pre>
                     
                     </section>
