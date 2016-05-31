@@ -6,4 +6,5 @@
   * [非捕获](section_04/non_capturing.md)
 * [元字符](section_05/index.md)
   * [^](section_05/chapter_01.md)
+  * [数量（重复次数）](section_05/chapter_02.md)
 * [关于本书](about/index.md)
