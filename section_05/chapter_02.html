@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>元字符 | 学习正则表达式-基于JavaScript</title>
+        <title>数量（重复次数） | 学习正则表达式-基于JavaScript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../section_05/chapter_01.html" />
+    <link rel="next" href="../about/index.html" />
     
     
-    <link rel="prev" href="../section_04/non_capturing.html" />
+    <link rel="prev" href="../section_05/chapter_01.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="5"
-        data-chapter-title="元字符"
-        data-filepath="section_05/index.md"
+        data-level="5.2"
+        data-chapter-title="数量（重复次数）"
+        data-filepath="section_05/chapter_02.md"
         data-basepath=".."
         data-revision="Tue May 31 2016 13:53:10 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -163,7 +163,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="5" data-path="section_05/index.html">
+        <li class="chapter " data-level="5" data-path="section_05/index.html">
             
                 
                     <a href="../section_05/index.html">
@@ -194,7 +194,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2" data-path="section_05/chapter_02.html">
+        <li class="chapter active" data-level="5.2" data-path="section_05/chapter_02.html">
             
                 
                     <a href="../section_05/chapter_02.html">
@@ -262,9 +262,11 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="&#x5143;&#x5B57;&#x7B26;">&#x5143;&#x5B57;&#x7B26;</h1>
-<p>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x91CC;&#x7684;&#x5143;&#x5B57;&#x7B26;&#x662F;&#x6709;&#x7279;&#x6B8A;&#x542B;&#x4E49;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x5B83;&#x4EEC;&#x901A;&#x5E38;&#x4E0D;&#x4F1A;&#x8868;&#x793A;&#x81EA;&#x8EAB;&#x8868;&#x9762;&#x7684;&#x610F;&#x601D;&#x3002;&#x4F8B;&#x5982; <code>[</code> &#x5E76;&#x4E0D;&#x4F1A;&#x5339;&#x914D; <code>[</code>&#xFF0C;&#x800C;&#x662F;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x96C6;&#x5408;&#x7684;&#x5F00;&#x59CB;&#x7B26;&#x53F7;&#xFF0C;&#x4E0E; <code>]</code> &#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x3002;&#x60F3;&#x8981;&#x5339;&#x914D;&#x5176;&#x672C;&#x8EAB;&#xFF0C;&#x8981;&#x4F7F;&#x7528;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;&#xFF1A; <code>\[</code>&#x3002;</p>
-
+                        <h2 id="&#x91CF;&#x8BCD;">&#x91CF;&#x8BCD;</h2>
+<pre><code>var reg = /\d+\.?\d[1, 2]/g;
+var str = [2, 2., 2.00001, 2.2, 2.22, 2.222, .22];
+str.forEach(item =&gt; { console.log(item, &apos; is:&apos;, reg.test(str)); });
+</code></pre>
                     
                     </section>
                 
@@ -274,10 +276,10 @@
         </div>
 
         
-        <a href="../section_04/non_capturing.html" class="navigation navigation-prev " aria-label="Previous page: 非捕获"><i class="fa fa-angle-left"></i></a>
+        <a href="../section_05/chapter_01.html" class="navigation navigation-prev " aria-label="Previous page: ^"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../section_05/chapter_01.html" class="navigation navigation-next " aria-label="Next page: ^"><i class="fa fa-angle-right"></i></a>
+        <a href="../about/index.html" class="navigation navigation-next " aria-label="Next page: 关于本书"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
