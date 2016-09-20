@@ -1,5 +1,7 @@
 # Summary
 * [JavaScript对正则表达式的支持](section1/index.md)
+  * [RegExp exec() 方法](section1/regexp-exec.md)
+  * [RegExp test() 方法](section1/regexp-test.md)
 * [匹配单个字符](section2/index.md)
 * [匹配一组字符](section_03/index.md)
 * [捕获](section_04/index.md)
