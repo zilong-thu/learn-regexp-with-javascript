@@ -10,3 +10,4 @@
   * [^](section_05/chapter_01.md)
   * [数量（重复次数）](section_05/chapter_02.md)
 * [关于本书](about/index.md)
+  * [参考读物](about/refs.md)

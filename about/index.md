@@ -1,10 +1,12 @@
-# 关于本书
+# 关于
 
 ## 作者
 **[zilong-thu](https://github.com/zilong-thu)**
 
 ## 制作
 本书使用 [GitBook](https://www.gitbook.com/) 提供的 npm 工具 [gitbook-cli@1.0.1](https://www.npmjs.com/package/gitbook-cli) 制作，然后发布在 Github Pages 服务上。
+
+书籍是完全开源的，托管仓库地址：[https://github.com/zilong-thu/learn-regexp-with-javascript](https://github.com/zilong-thu/learn-regexp-with-javascript)。
 
 ```
 # 首先，全局安装 gitbook-cli 工具
