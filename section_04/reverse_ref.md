@@ -5,5 +5,5 @@
 ```
 var reg = /<(\w+)>(.*)<\/\1>/;
 var htmlStr = '<strong></strong>';
-console.log(reg.test(htmlStr));
+console.log(reg.test(htmlStr));  // => true
 ```
