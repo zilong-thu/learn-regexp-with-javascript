@@ -53,7 +53,7 @@
         data-chapter-title="RegExp exec() 方法"
         data-filepath="section1/regexp-exec.md"
         data-basepath=".."
-        data-revision="Sat Oct 29 2016 12:43:04 GMT+0800 (CST)"
+        data-revision="Sat Oct 29 2016 12:44:43 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -343,7 +343,12 @@
 <h2 id="&#x4F8B;&#x5B50;&#xFF1A;&#x4E00;&#x4E2A;20&#x884C;&#x4E0D;&#x5230;&#x7684;-javascript-&#x6A21;&#x677F;&#x5F15;&#x64CE;">&#x4F8B;&#x5B50;&#xFF1A;&#x4E00;&#x4E2A;20&#x884C;&#x4E0D;&#x5230;&#x7684; JavaScript &#x6A21;&#x677F;&#x5F15;&#x64CE;</h2>
 <p>&#x53C2;&#x8003;&#xFF1A;<a href="http://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line" target="_blank">JavaScript template engine in just 20 lines</a>&#x3002;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x91CC;&#x7ED9;&#x51FA;&#x7684;&#x6700;&#x7EC8;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code>var TemplateEngine = function(html, options) {
-  var re = /&lt;%([^%&gt;]+)?%&gt;/g, reExp = /(^( )?(if|for|else|switch|case|break|{|}))(.*)?/g, code = &apos;var r=[];\n&apos;, cursor = 0, match;
+  var re = /&lt;%([^%&gt;]+)?%&gt;/g;
+  var reExp = /(^( )?(if|for|else|switch|case|break|{|}))(.*)?/g;
+  var code = &apos;var r=[];\n&apos;;
+  var cursor = 0;
+  var match;
+
   var add = function(line, js) {
     js? (code += line.match(reExp) ? line + &apos;\n&apos; : &apos;r.push(&apos; + line + &apos;);\n&apos;) :
       (code += line != &apos;&apos; ? &apos;r.push(&quot;&apos; + line.replace(/&quot;/g, &apos;\\&quot;&apos;) + &apos;&quot;);\n&apos; : &apos;&apos;);
