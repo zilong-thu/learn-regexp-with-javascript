@@ -1,7 +1,19 @@
 # RegExp.prototype.exec()
 
+## 语法
 
-## 【案例】一个20行不到的 JavaScript 模板引擎
+```
+regexObj.exec(str)
+```
+
+### 返回值
+
+匹配成功，TODO *
+
+匹配失败，exec 方法将返回 `null`。
+
+
+## 例子：一个20行不到的 JavaScript 模板引擎
 
 参考：[JavaScript template engine in just 20 lines](http://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line)。这篇文章里给出的最终示例代码如下：
 
