@@ -53,7 +53,7 @@
         data-chapter-title="RegExp exec() 方法"
         data-filepath="section1/regexp-exec.md"
         data-basepath=".."
-        data-revision="Fri Oct 28 2016 00:49:17 GMT+0800 (CST)"
+        data-revision="Sat Oct 29 2016 12:34:59 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -335,7 +335,40 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="regexpprototypeexec">RegExp.prototype.exec()</h1>
+<h2 id="&#x3010;&#x6848;&#x4F8B;&#x3011;&#x4E00;&#x4E2A;20&#x884C;&#x4E0D;&#x5230;&#x7684;-javascript-&#x6A21;&#x677F;&#x5F15;&#x64CE;">&#x3010;&#x6848;&#x4F8B;&#x3011;&#x4E00;&#x4E2A;20&#x884C;&#x4E0D;&#x5230;&#x7684; JavaScript &#x6A21;&#x677F;&#x5F15;&#x64CE;</h2>
+<p>&#x53C2;&#x8003;&#xFF1A;<a href="http://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line" target="_blank">JavaScript template engine in just 20 lines</a>&#x3002;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x91CC;&#x7ED9;&#x51FA;&#x7684;&#x6700;&#x7EC8;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>var TemplateEngine = function(html, options) {
+  var re = /&lt;%([^%&gt;]+)?%&gt;/g, reExp = /(^( )?(if|for|else|switch|case|break|{|}))(.*)?/g, code = &apos;var r=[];\n&apos;, cursor = 0, match;
+  var add = function(line, js) {
+    js? (code += line.match(reExp) ? line + &apos;\n&apos; : &apos;r.push(&apos; + line + &apos;);\n&apos;) :
+      (code += line != &apos;&apos; ? &apos;r.push(&quot;&apos; + line.replace(/&quot;/g, &apos;\\&quot;&apos;) + &apos;&quot;);\n&apos; : &apos;&apos;);
+    return add;
+  }
+  while(match = re.exec(html)) {
+    add(html.slice(cursor, match.index))(match[1], true);
+    cursor = match.index + match[0].length;
+  }
+  add(html.substr(cursor, html.length - cursor));
+  code += &apos;return r.join(&quot;&quot;);&apos;;
+  return new Function(code.replace(/[\r\t\n]/g, &apos;&apos;)).apply(options);
+}
 
+// &#x6D4B;&#x8BD5;&#x4EE3;&#x7801;
+var template = 
+  &apos;My skills:&apos; + 
+  &apos;&lt;%if(this.showSkills) {%&gt;&apos; +
+      &apos;&lt;%for(var index in this.skills) {%&gt;&apos; + 
+      &apos;&lt;a href=&quot;#&quot;&gt;&lt;%this.skills[index]%&gt;&lt;/a&gt;&apos; +
+      &apos;&lt;%}%&gt;&apos; +
+  &apos;&lt;%} else {%&gt;&apos; +
+  &apos;&lt;p&gt;none&lt;/p&gt;&apos; +
+  &apos;&lt;%}%&gt;&apos;;
+
+  console.log(TemplateEngine(template, {
+    skills: [&quot;js&quot;, &quot;html&quot;, &quot;css&quot;],
+    showSkills: true
+  }));
+</code></pre>
                     
                     </section>
                 
