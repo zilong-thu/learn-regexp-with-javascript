@@ -6,7 +6,7 @@
 * [匹配一组字符](section_03/index.md)
 * [捕获](section_04/index.md)
   * [非捕获](section_04/non_capturing.md)
-  * [反向引用](section_04/reverse_ref.md)
+  * [捕获反向引用](section_04/reverse_ref.md)
 * [元字符](section_05/index.md)
   * [起始符号^](section_05/chapter_01.md)
   * [数量（重复次数）](section_05/chapter_02.md)
