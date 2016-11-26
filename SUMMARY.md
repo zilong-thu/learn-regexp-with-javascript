@@ -1,6 +1,7 @@
 # Summary
 * [正则表达式概述](section0/index.md)
   * [有限状态机](section0/finite_state_machine.md)
+  * [正则表达式的应用场景](section0/reg_applications.md)
 * [JavaScript对正则表达式的支持](section1/index.md)
   * [RegExp exec() 方法](section1/regexp-exec.md)
   * [RegExp test() 方法](section1/regexp-test.md)
