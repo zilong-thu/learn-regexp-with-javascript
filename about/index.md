@@ -1,16 +1,18 @@
 # 关于
 
 ## 作者
+
 **[zilong-thu](https://github.com/zilong-thu)**
 
 ## 制作
+
 本书使用 [GitBook](https://www.gitbook.com/) 提供的 npm 工具 [gitbook-cli@1.0.1](https://www.npmjs.com/package/gitbook-cli) 制作，然后发布在 Github Pages 服务上。
 
 书籍是完全开源的，托管仓库地址：[https://github.com/zilong-thu/learn-regexp-with-javascript](https://github.com/zilong-thu/learn-regexp-with-javascript)。
 
-```
+```bash
 # 首先，全局安装 gitbook-cli 工具
-npm install -g gitbook-cli
+$ npm install -g gitbook-cli
 ```
 
 gitbook-cli 自带的命令比较少，如果是使用 github 提供的 githook 发布制作到 GitBook 网站上，倒也无妨。不过这里提供一个自动化的解决方案。
@@ -25,7 +27,7 @@ Macbook Pro OXS Yosemite 10.10.5
 
 第一次执行了 `gitbook build` 之后，创建 `gh-pages` 分支：
 
-```
+```bash
 # 创建 gh-pages 分支
 $ git checkout --orphan gh-pages
 $ git rm --cached -r .
@@ -46,8 +48,8 @@ $ git push origin gh-pages
 
 在 master 分支下，添加 package.json 文件。添加以下关键代码：
 
-```
-"scripts": {
+```json
+  "scripts": {
     "git-push-master": "git checkout master && git add --all && git commit -m 'source files update' && git push origin master",
     "build": "gitbook build && cp package.json ./_book",
     "git-push-gh-pages": "git checkout gh-pages && cp -r _book/* . && git add --all && git commit -m 'new build' && git push origin gh-pages && git checkout master",
@@ -59,7 +61,7 @@ $ git push origin gh-pages
 
 上面的 `scripts` 其实是 shell 脚本，写到`package.json`里的一个缺点是不能换行。那么可以在项目的根目录下添加一个 `deploy.sh`文件，内容为：
 
-```
+```bash
 #!/bin/bash
 
 git checkout master
@@ -81,9 +83,9 @@ git checkout master
 
 第一句话 `#!/bin/bash` 指定了这段命令由 bash 来解释执行。
 
-注：`./deploy.sh` 命令需要一定的执行权限。
+注：`./deploy.sh` 命令需要一定的执行权限。可以像下面这样来设置：
 
-```
-chmod 774 deploy.sh
+```bash
+$ chmod 774 deploy.sh
 ```
 
