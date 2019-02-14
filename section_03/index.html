@@ -1,470 +1,504 @@
+
 <!DOCTYPE HTML>
-<html lang="en" >
-    
+<html lang="" >
     <head>
-        
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>匹配一组字符 | 学习正则表达式-基于JavaScript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>匹配一组字符 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
-        <meta name="HandheldFriendly" content="true"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
         
+    
     <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
     
         
-        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+    
         
     
         
-        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+    
         
     
         
-        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
-        
     
+        
     
 
         
     
     
-    <link rel="next" href="../section_04/index.html" />
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../section_04/" />
     
     
-    <link rel="prev" href="../section2/index.html" />
+    <link rel="prev" href="../section2/" />
     
 
-        
     </head>
     <body>
         
+<div class="book">
+    <div class="book-summary">
         
-    <div class="book"
-        data-level="4"
-        data-chapter-title="匹配一组字符"
-        data-filepath="section_03/index.md"
-        data-basepath=".."
-        data-revision="Sat Nov 26 2016 15:30:56 GMT+0800 (CST)"
-        data-innerlanguage="">
-    
-
-<div class="book-summary">
-    <nav role="navigation">
-        <ul class="summary">
             
-            
-            
-            
-
-            
-
-            
-    
-        <li class="chapter " data-level="0" data-path="index.html">
-            
-                
-                    <a href="../index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                        Introduction
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1" data-path="section0/index.html">
-            
-                
-                    <a href="../section0/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.</b>
-                        
-                        正则表达式概述
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.1" data-path="section0/finite_state_machine.html">
-            
-                
-                    <a href="../section0/finite_state_machine.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.1.</b>
-                        
-                        有限状态机
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2" data-path="section0/reg_applications.html">
-            
-                
-                    <a href="../section0/reg_applications.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.2.</b>
-                        
-                        正则表达式的应用场景
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="2" data-path="section1/index.html">
-            
-                
-                    <a href="../section1/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.</b>
-                        
-                        JavaScript对正则表达式的支持
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="2.1" data-path="section1/regexp-exec.html">
-            
-                
-                    <a href="../section1/regexp-exec.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.1.</b>
-                        
-                        RegExp exec() 方法
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.2" data-path="section1/regexp-test.html">
-            
-                
-                    <a href="../section1/regexp-test.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.2.</b>
-                        
-                        RegExp test() 方法
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="3" data-path="section2/index.html">
-            
-                
-                    <a href="../section2/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.</b>
-                        
-                        匹配单个字符
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter active" data-level="4" data-path="section_03/index.html">
-            
-                
-                    <a href="../section_03/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.</b>
-                        
-                        匹配一组字符
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5" data-path="section_04/index.html">
-            
-                
-                    <a href="../section_04/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.</b>
-                        
-                        捕获
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="5.1" data-path="section_04/non_capturing.html">
-            
-                
-                    <a href="../section_04/non_capturing.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.1.</b>
-                        
-                        非捕获
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.2" data-path="section_04/reverse_ref.html">
-            
-                
-                    <a href="../section_04/reverse_ref.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.2.</b>
-                        
-                        捕获反向引用
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="6" data-path="section_05/index.html">
-            
-                
-                    <a href="../section_05/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.</b>
-                        
-                        元字符
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="6.1" data-path="section_05/chapter_01.html">
-            
-                
-                    <a href="../section_05/chapter_01.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.1.</b>
-                        
-                        起始符号^
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="6.2" data-path="section_05/chapter_02.html">
-            
-                
-                    <a href="../section_05/chapter_02.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.2.</b>
-                        
-                        数量（重复次数）
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="7" data-path="about/index.html">
-            
-                
-                    <a href="../about/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.</b>
-                        
-                        关于本书
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="7.1" data-path="about/refs.html">
-            
-                
-                    <a href="../about/refs.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.1.</b>
-                        
-                        参考读物
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-
-            
-            <li class="divider"></li>
-            <li>
-                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                    Published with GitBook
-                </a>
-            </li>
-            
-        </ul>
-    </nav>
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
 </div>
 
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../section0/">
+            
+                <a href="../section0/">
+            
+                    
+                    正则表达式概述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../section0/finite_state_machine.html">
+            
+                <a href="../section0/finite_state_machine.html">
+            
+                    
+                    有限状态机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../section0/reg_applications.html">
+            
+                <a href="../section0/reg_applications.html">
+            
+                    
+                    正则表达式的应用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../section1/">
+            
+                <a href="../section1/">
+            
+                    
+                    JavaScript对正则表达式的支持
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../section1/regexp-exec.html">
+            
+                <a href="../section1/regexp-exec.html">
+            
+                    
+                    RegExp exec() 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../section1/regexp-test.html">
+            
+                <a href="../section1/regexp-test.html">
+            
+                    
+                    RegExp test() 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../section2/">
+            
+                <a href="../section2/">
+            
+                    
+                    匹配单个字符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    匹配一组字符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../section_04/">
+            
+                <a href="../section_04/">
+            
+                    
+                    捕获
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../section_04/non_capturing.html">
+            
+                <a href="../section_04/non_capturing.html">
+            
+                    
+                    非捕获
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../section_04/reverse_ref.html">
+            
+                <a href="../section_04/reverse_ref.html">
+            
+                    
+                    捕获反向引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../section_05/">
+            
+                <a href="../section_05/">
+            
+                    
+                    元字符
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../section_05/chapter_01.html">
+            
+                <a href="../section_05/chapter_01.html">
+            
+                    
+                    起始符号^
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../section_05/chapter_02.html">
+            
+                <a href="../section_05/chapter_02.html">
+            
+                    
+                    数量（重复次数）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../about/">
+            
+                <a href="../about/">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../about/refs.html">
+            
+                <a href="../about/refs.html">
+            
+                    
+                    参考读物
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
     <div class="book-body">
-        <div class="body-inner">
-            <div class="book-header" role="navigation">
-    <!-- Actions Left -->
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
     
 
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../" >学习正则表达式-基于JavaScript</a>
+        <a href=".." >匹配一组字符</a>
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1" role="main">
-                <div class="page-inner">
-                
-                
-                    <section class="normal" id="section-">
-                    
-                        <h1 id="&#x5339;&#x914D;&#x4E00;&#x7EC4;&#x5B57;&#x7B26;">&#x5339;&#x914D;&#x4E00;&#x7EC4;&#x5B57;&#x7B26;</h1>
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5339;&#x914D;&#x4E00;&#x7EC4;&#x5B57;&#x7B26;">&#x5339;&#x914D;&#x4E00;&#x7EC4;&#x5B57;&#x7B26;</h1>
 <h2 id="&#x5B57;&#x7B26;&#x96C6;&#x5408;">&#x5B57;&#x7B26;&#x96C6;&#x5408;</h2>
 <p><code>[</code> &#x548C; <code>]</code> &#x7528;&#x6765;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x96C6;&#x5408;&#xFF0C;&#x53EF;&#x4EE5;&#x5339;&#x914D;&#x542B;&#x6709;&#x8BE5;&#x96C6;&#x5408;&#x4EFB;&#x4E00;&#x5143;&#x7D20;&#x7684;&#x6587;&#x672C;&#x3002;</p>
 <p><strong> &#x793A;&#x4F8B; 1 </strong></p>
 <p>&#x7528; JavaScript &#x5199;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x6708;&#x4EFD;&#x7684;&#x5929;&#x6570;&#x3002;</p>
-<pre><code>function isLeapYear(year){
-  return year%400 === 0 || (year%4 ===0 &amp;&amp; year%100 !== 0);
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isLeapYear</span>(<span class="hljs-params">year</span>)</span>{
+  <span class="hljs-keyword">return</span> year%<span class="hljs-number">400</span> === <span class="hljs-number">0</span> || (year%<span class="hljs-number">4</span> ===<span class="hljs-number">0</span> &amp;&amp; year%<span class="hljs-number">100</span> !== <span class="hljs-number">0</span>);
 }
 
-function getDaysOfMonth(month){
-  var date  = new Date();
-  var month = month || date.getMonth() + 1;
-  var year  = date.getFullYear();
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getDaysOfMonth</span>(<span class="hljs-params">month</span>)</span>{
+  <span class="hljs-keyword">var</span> date  = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+  <span class="hljs-keyword">var</span> month = month || date.getMonth() + <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">var</span> year  = date.getFullYear();
 
-  var totalDays = &apos;31&apos;;
+  <span class="hljs-keyword">var</span> totalDays = <span class="hljs-string">&apos;31&apos;</span>;
 
-  if( /[469]|(11)/.test(month) ){
-    totalDays = &apos;30&apos;;
-  } else if (month === 2) {
-    totalDays = isLeapYear(year) ? &apos;29&apos; : &apos;28&apos;;
+  <span class="hljs-keyword">if</span>( <span class="hljs-regexp">/[469]|(11)/</span>.test(month) ){
+    totalDays = <span class="hljs-string">&apos;30&apos;</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (month === <span class="hljs-number">2</span>) {
+    totalDays = isLeapYear(year) ? <span class="hljs-string">&apos;29&apos;</span> : <span class="hljs-string">&apos;28&apos;</span>;
   }
 
-  return totalDays;
+  <span class="hljs-keyword">return</span> totalDays;
 }
-console.log(getDaysOfMonth(2));  // 2016&#x5E74;&#x7684;&#x8BDD;&#xFF0C;&#x8F93;&#x51FA; 29
-</code></pre><p>&#x4E00;&#x5E74;&#x91CC;&#x6709;7&#x4E2A;&#x6708;&#x4EFD;&#x662F;31&#x5929;&#xFF0C;4&#x4E2A;&#x6708;&#x4EFD;&#x662F;30&#x5929;&#x3002;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;<code>/[469]|(11)/</code>&#x53BB;&#x5339;&#x914D;4&#x6708;&#x3001;6&#x6708;&#x3001;9&#x6708;&#x6216;&#x8005;11&#x6708;&#x3002;<code>|</code>&#x4E3A;&#x6216;&#x8005;&#x7684;&#x610F;&#x601D;&#x3002;<code>()</code>&#x5305;&#x88F9;&#x8D77;&#x6765;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5B50;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x56E0;&#x4E3A;<code>11</code>&#x5FC5;&#x987B;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x6574;&#x4F53;&#x88AB;&#x5339;&#x914D;&#x3002;</p>
+<span class="hljs-built_in">console</span>.log(getDaysOfMonth(<span class="hljs-number">2</span>));  <span class="hljs-comment">// 2016&#x5E74;&#x7684;&#x8BDD;&#xFF0C;&#x8F93;&#x51FA; 29</span>
+</code></pre>
+<p>&#x4E00;&#x5E74;&#x91CC;&#x6709;7&#x4E2A;&#x6708;&#x4EFD;&#x662F;31&#x5929;&#xFF0C;4&#x4E2A;&#x6708;&#x4EFD;&#x662F;30&#x5929;&#x3002;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;<code>/[469]|(11)/</code>&#x53BB;&#x5339;&#x914D;4&#x6708;&#x3001;6&#x6708;&#x3001;9&#x6708;&#x6216;&#x8005;11&#x6708;&#x3002;<code>|</code>&#x4E3A;&#x6216;&#x8005;&#x7684;&#x610F;&#x601D;&#x3002;<code>()</code>&#x5305;&#x88F9;&#x8D77;&#x6765;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5B50;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x56E0;&#x4E3A;<code>11</code>&#x5FC5;&#x987B;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x6574;&#x4F53;&#x88AB;&#x5339;&#x914D;&#x3002;</p>
 <p><strong> &#x793A;&#x4F8B; 2 </strong></p>
 <p>&#x524D;&#x7AEF;&#x4ECE;&#x540E;&#x7AEF;&#x83B7;&#x53D6;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x542B;&#x6709;&#x5706;&#x62EC;&#x53F7;&#xFF0C;&#x8981;&#x5C06;&#x5176;&#x663E;&#x793A;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x3002;&#x9700;&#x8981;&#x5728;&#x9047;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x5706;&#x62EC;&#x53F7;&#x540E;&#x5C31;&#x8FDB;&#x884C;&#x6362;&#x884C;&#xFF0C;&#x4E0D;&#x7136;&#x5B57;&#x7B26;&#x4E32;&#x53EF;&#x80FD;&#x56E0;&#x4E3A;&#x592A;&#x957F;&#x800C;&#x663E;&#x793A;&#x4E0D;&#x5168;&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;&#x5706;&#x62EC;&#x53F7;&#x53EF;&#x80FD;&#x662F;&#x82F1;&#x6587;&#x534A;&#x89D2;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x4E2D;&#x6587;&#x5168;&#x89D2;&#xFF0C;&#x6240;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528;&#x5B57;&#x7B26;&#x96C6;&#x5408;&#x3002;</p>
-<pre><code>var str = &apos;&#x65B0;&#x534E;&#x4E66;&#x5E97;(&#x4E2D;&#x5173;&#x6751;&#x56FE;&#x4E66;&#x5927;&#x53A6;&#x5E97;)&apos;;
- var pattern = /([\(\&#xFF08;])/;
-var result = str.replace(pattern, &apos;\n$1&apos;);
-console.log(result);
-</code></pre><p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x4E86;&#x5B57;&#x7B26;&#x96C6;&#x5408;&#x3001;&#x56DE;&#x6EAF;&#x5F15;&#x7528;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&apos;&#x65B0;&#x534E;&#x4E66;&#x5E97;(&#x4E2D;&#x5173;&#x6751;&#x56FE;&#x4E66;&#x5927;&#x53A6;&#x5E97;)&apos;</span>;
+ <span class="hljs-keyword">var</span> pattern = <span class="hljs-regexp">/([\(\&#xFF08;])/</span>;
+<span class="hljs-keyword">var</span> result = str.replace(pattern, <span class="hljs-string">&apos;\n$1&apos;</span>);
+<span class="hljs-built_in">console</span>.log(result);
+</code></pre>
+<p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x4E86;&#x5B57;&#x7B26;&#x96C6;&#x5408;&#x3001;&#x56DE;&#x6EAF;&#x5F15;&#x7528;&#x3002;</p>
 <h2 id="&#x5B57;&#x7B26;&#x96C6;&#x5408;&#x533A;&#x95F4;">&#x5B57;&#x7B26;&#x96C6;&#x5408;&#x533A;&#x95F4;</h2>
 <p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>[0-9]</code>&#x5339;&#x914D;0&#x81F3;9&#x4E4B;&#x95F4;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x3002;&#x8FD9;&#x662F;<code>[0123456789]</code>&#x7684;&#x7B80;&#x5199;&#x3002;&#x6548;&#x679C;&#x4E0E;<code>\d</code>&#x5176;&#x5B9E;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;</p>
 
-                    
-                    </section>
-                
-                
-                </div>
-            </div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
         </div>
-
-        
-        <a href="../section2/index.html" class="navigation navigation-prev " aria-label="Previous page: 匹配单个字符"><i class="fa fa-angle-left"></i></a>
-        
-        
-        <a href="../section_04/index.html" class="navigation navigation-next " aria-label="Next page: 捕获"><i class="fa fa-angle-right"></i></a>
-        
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
     </div>
 </div>
 
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../section2/" class="navigation navigation-prev " aria-label="Previous page: 匹配单个字符">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../section_04/" class="navigation navigation-next " aria-label="Next page: 捕获">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
         
-<script src="../gitbook/app.js"></script>
+    </div>
 
-    
-    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
-    
-
-    
-    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
-    
-
-    
-    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
-    
-
-    
-    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
-    
-
-<script>
-require(["gitbook"], function(gitbook) {
-    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
-    gitbook.start(config);
-});
-</script>
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"匹配一组字符","level":"1.5","depth":1,"next":{"title":"捕获","level":"1.6","depth":1,"path":"section_04/index.md","ref":"section_04/index.md","articles":[{"title":"非捕获","level":"1.6.1","depth":2,"path":"section_04/non_capturing.md","ref":"section_04/non_capturing.md","articles":[]},{"title":"捕获反向引用","level":"1.6.2","depth":2,"path":"section_04/reverse_ref.md","ref":"section_04/reverse_ref.md","articles":[]}]},"previous":{"title":"匹配单个字符","level":"1.4","depth":1,"path":"section2/index.md","ref":"section2/index.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section_03/index.md","mtime":"2019-02-14T08:41:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-14T08:43:58.515Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
 
         
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
     </body>
-    
 </html>
+
