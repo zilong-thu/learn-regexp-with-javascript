@@ -7,7 +7,7 @@
 
 在 jQuery 源码中有这样一个经典正则表达式：
 
-```
+```javascript
 // A simple way to check for HTML strings
 // Prioritize #id over <tag> to avoid XSS via location.hash (#9521)
 // Strict HTML recognition (#11290: must start with <)
@@ -22,7 +22,7 @@ var rquickExpr = /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]+))$/;
 
 下面是几个测试用例：
 
-```
+```javascript
 var str = ['#container', 'div #id', '<div>haha</div>', 'aaa<div>aa</div>', '<a>'];
 
 str.forEach(item => {

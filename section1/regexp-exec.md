@@ -17,7 +17,7 @@ regexObj.exec(str)
 
 参考：[JavaScript template engine in just 20 lines](http://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line)。这篇文章里给出的最终示例代码如下：
 
-```
+```javascript
 var TemplateEngine = function(html, options) {
   var re = /<%([^%>]+)?%>/g;
   var reExp = /(^( )?(if|for|else|switch|case|break|{|}))(.*)?/g;

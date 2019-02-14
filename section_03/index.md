@@ -8,7 +8,7 @@
 
 用 JavaScript 写一个函数，返回当前月份的天数。
 
-```
+```javascript
 function isLeapYear(year){
   return year%400 === 0 || (year%4 ===0 && year%100 !== 0);
 }
@@ -37,7 +37,7 @@ console.log(getDaysOfMonth(2));  // 2016年的话，输出 29
 
 前端从后端获取的字符串中含有圆括号，要将其显示在页面中。需要在遇到第一个圆括号后就进行换行，不然字符串可能因为太长而显示不全。不过，圆括号可能是英文半角，也可能是中文全角，所以考虑使用字符集合。
 
-```
+```javascript
 var str = '新华书店(中关村图书大厦店)';
  var pattern = /([\(\（])/;
 var result = str.replace(pattern, '\n$1');
