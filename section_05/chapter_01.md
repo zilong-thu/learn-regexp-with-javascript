@@ -3,11 +3,11 @@
 
 ### ① 表示字符集合的**非**：
 
-示例：将url的查询参数解析成字典对象
+示例：将 url 的查询参数解析成字典对象
 
 参考文章：[2016十家公司前端面试小记](http://www.cnblogs.com/xxcanghai/p/5205998.html?utm_source=tuicool&utm_medium=referral)
 
-```
+```javascript
 function getQueryObject(url) {
     url = url == null ? window.location.href : url;
     var search = url.substring(url.lastIndexOf("?") + 1);
@@ -15,7 +15,7 @@ function getQueryObject(url) {
     var reg = /([^?&=]+)=([^?&=]*)/g;
     search.replace(reg, function (rs, $1, $2) {
         var name = decodeURIComponent($1);
-        var val = decodeURIComponent($2);                
+        var val = decodeURIComponent($2);
         val = String(val);
         obj[name] = val;
         return rs;
@@ -36,7 +36,7 @@ function getQueryObject(url) {
 
 示例：匹配数字，其精度不超过小数点后两位，如 `20.09` 是合法的，但是 `20.900` 是不合法的。
 
-```
+```javascript
 // TODO
 var reg = /^[1-9]((?:[0-9]*)(?:\.[0-9]{1,2})?)$/gm;
 var numbers = [2.1, 2.12, 2.123, 2.12];

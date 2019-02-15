@@ -6,10 +6,10 @@
 
 下面给出一个示例：校验一个字符串，是否为最多精确到小数点后两位的数字。【待完成】
 
-```
+```javascript
 var reg = /\d+\.?\d{1,2}/g;
 var str = ['2', '2.', '2.00.001', '2.2', '2.22', '2.222', '.22', '-2.2', '+2.2'];
 str.forEach(item => {
-  console.log(item, ' is:', reg.test(str)); 
+  console.log(item, ' is:', reg.test(str));
 });
 ```
